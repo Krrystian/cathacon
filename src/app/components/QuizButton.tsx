@@ -8,7 +8,7 @@ const QuizButton = () => {
   return (
     <Link
       className="relative text-3xl flex justify-between p-2 bg-[#6C464E] text-[#F1FFE7] rounded-md overflow-hidden"
-      href="#"
+      href="/quiz"
       onMouseEnter={() => setOnHover(true)}
       onMouseLeave={() => setOnHover(false)}
     >

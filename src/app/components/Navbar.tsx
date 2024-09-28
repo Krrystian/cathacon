@@ -8,9 +8,9 @@ const Navbar = () => {
       <p className="text-4xl font-black select-none">FED.</p>
       <div className="h-full">
         <ul className="flex h-full">
-          <NavButton href="#">Przystąp do Quizu</NavButton>
+          <NavButton href="/quiz">Przystąp do Quizu</NavButton>
           <NavButton href="#">Wyszukiwarka zajęć</NavButton>
-          <NavButton href="#">O nas</NavButton>
+          <NavButton href="/aboutUs">O nas</NavButton>
           <NavButton href="#" separator={false}>
             Zaloguj się
           </NavButton>
