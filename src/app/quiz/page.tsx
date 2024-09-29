@@ -1,7 +1,7 @@
-"use client"
-import React, { useState } from 'react';
-import Navbar from '../components/Navbar';
-import { motion } from 'framer-motion';
+"use client";
+import React, { useState } from "react";
+import Navbar from "../components/Navbar";
+import { motion } from "framer-motion";
 
 interface QuestionProps {
   question: string;
@@ -17,7 +17,9 @@ const QuestionItem: React.FC<{
   const [hoveredOption, setHoveredOption] = React.useState<string | null>(null);
 
   const handleOptionSelect = (index: number) => {
-    const newSelectedAnswer = question.options.map((_, i) => (i === index ? 1 : 0));
+    const newSelectedAnswer = question.options.map((_, i) =>
+      i === index ? 1 : 0
+    );
     onSelect(newSelectedAnswer);
   };
 
@@ -62,82 +64,100 @@ const QuestionItem: React.FC<{
 
 const Quiz: React.FC = () => {
   const questions: QuestionProps[] = [
-      {
-        question: 'Wybierz przedział, w którym znajduje się obecny wiek dziecka:',
-        options: ['4-5 lat', '6-7 lat', '8-9 lat'],
-        answer: ''
-      },
-        {
-          question: 'Jaka jest osobowość Twojego dziecka?',
-          options: [
-            'Aktywna fizycznie, lubi się ruszać',
-            'Ciekawska, lubi eksperymentować',
-            'Kreatywna, ma bogatą wyobraźnię',
-            'Skoncentrowana, lubi wyzwania intelektualne',
-            'Towarzyska, lubi pracować w grupie',
-          ],
-          answer: ''
-        },
-        {
-          question: 'Czy Twoje dziecko ma jakieś ograniczenia fizyczne lub zdrowotne, które warto wziąć pod uwagę?',
-          options: [
-            'ADHD',
-            'Astma',
-            'Brak',
-            'Brak koordynacji ruchowej',
-            'Problemy ze słuchem',
-            'Płaskostopie',
-            'Skolioza',
-            'Wada wymowy',
-            'Wada wzroku',
-          ],
-          answer: ''
-        },
-        {
-          question: 'Jaki jest preferowany czas trwania zajęć?',
-          options: ['Długie, powyżej godziny','Krótkie maksymalnie 30 minut', 'Średnie, 30-60 minut'],
-          answer: ''
-        },
-        {
-          question: 'Czy wolisz, aby zajęcia odbywały się w pomieszczeniu, czy na świeżym powietrzu?',
-          options: ['Na świeżym powietrzu', 'Nie ma to znaczenia', 'W pomieszczeniu'],
-          answer: ''
-        },
-        {
-          question: 'Czy dziecko ma preferencje dotyczące zajęć indywidualnych czy grupowych?',
-          options: ['Zajęcia grupowe','Zajęcia indywidualne'],
-          answer: ''
-        },
-        {
-          question: 'Jakie cechy chcesz rozwijać u swojego dziecka?',
-          options: [
-            'Dyscyplina',
-            'Inteligencja emocjonalna',
-            'Kondycja fizyczna i zdrowie',
-            'Kreatywność i wyrażanie siebie',
-            'Umiejętności naukowe i techniczne',
-            'Umiejętności społeczne',
-          ],
-          answer: ''
-        },
-        {
-          question: 'Na jakim rodzaju aktywności Twoje dziecko najlepiej się koncentruje?',
-          options: [
-            'Artystyczne, wymagające twórczości',
-            'Fizyczne, wymagające ruchu',
-            'Naukowe, wymagające logiki i analizy',
-            'Towarzyskie, wymagające współpracy z innymi'
-          ],
-          answer: ''
-        },
-        {
-          question: 'Czy Twoje dziecko lubi nowe wyzwania, czy woli pracować nad tym, co już zna?',
-          options: ['Lubi odkrywać nowe rzeczy', 'Woli doskonalić umiejętności, które już zna'],
-          answer: ''
-        },
-      ];
+    {
+      question: "Wybierz przedział, w którym znajduje się obecny wiek dziecka:",
+      options: ["4-5 lat", "6-7 lat", "8-9 lat"],
+      answer: "",
+    },
+    {
+      question: "Jaka jest osobowość Twojego dziecka?",
+      options: [
+        "Aktywna fizycznie, lubi się ruszać",
+        "Ciekawska, lubi eksperymentować",
+        "Kreatywna, ma bogatą wyobraźnię",
+        "Skoncentrowana, lubi wyzwania intelektualne",
+        "Towarzyska, lubi pracować w grupie",
+      ],
+      answer: "",
+    },
+    {
+      question:
+        "Czy Twoje dziecko ma jakieś ograniczenia fizyczne lub zdrowotne, które warto wziąć pod uwagę?",
+      options: [
+        "ADHD",
+        "Astma",
+        "Brak",
+        "Brak koordynacji ruchowej",
+        "Problemy ze słuchem",
+        "Płaskostopie",
+        "Skolioza",
+        "Wada wymowy",
+        "Wada wzroku",
+      ],
+      answer: "",
+    },
+    {
+      question: "Jaki jest preferowany czas trwania zajęć?",
+      options: [
+        "Długie, powyżej godziny",
+        "Krótkie maksymalnie 30 minut",
+        "Średnie, 30-60 minut",
+      ],
+      answer: "",
+    },
+    {
+      question:
+        "Czy wolisz, aby zajęcia odbywały się w pomieszczeniu, czy na świeżym powietrzu?",
+      options: [
+        "Na świeżym powietrzu",
+        "Nie ma to znaczenia",
+        "W pomieszczeniu",
+      ],
+      answer: "",
+    },
+    {
+      question:
+        "Czy dziecko ma preferencje dotyczące zajęć indywidualnych czy grupowych?",
+      options: ["Zajęcia grupowe", "Zajęcia indywidualne"],
+      answer: "",
+    },
+    {
+      question: "Jakie cechy chcesz rozwijać u swojego dziecka?",
+      options: [
+        "Dyscyplina",
+        "Inteligencja emocjonalna",
+        "Kondycja fizyczna i zdrowie",
+        "Kreatywność i wyrażanie siebie",
+        "Umiejętności naukowe i techniczne",
+        "Umiejętności społeczne",
+      ],
+      answer: "",
+    },
+    {
+      question:
+        "Na jakim rodzaju aktywności Twoje dziecko najlepiej się koncentruje?",
+      options: [
+        "Artystyczne, wymagające twórczości",
+        "Fizyczne, wymagające ruchu",
+        "Naukowe, wymagające logiki i analizy",
+        "Towarzyskie, wymagające współpracy z innymi",
+      ],
+      answer: "",
+    },
+    {
+      question:
+        "Czy Twoje dziecko lubi nowe wyzwania, czy woli pracować nad tym, co już zna?",
+      options: [
+        "Lubi odkrywać nowe rzeczy",
+        "Woli doskonalić umiejętności, które już zna",
+      ],
+      answer: "",
+    },
+  ];
 
-  const [answers, setAnswers] = useState<number[][]>(Array(questions.length).fill([]));
+  const [answers, setAnswers] = useState<number[][]>(
+    Array(questions.length).fill([])
+  );
 
   const handleSelectAnswer = (index: number, answer: number[]) => {
     const newAnswers = [...answers];
@@ -147,10 +167,14 @@ const Quiz: React.FC = () => {
 
   const handleSubmit = async () => {
     if (answers.every((answer) => answer.includes(1))) {
-      console.log('Odpowiedzi:', answers.flat());
+      console.log("Odpowiedzi:", answers.flat());
       try {
-        const response = await fetch("/quiz", {
+        const response = await fetch("/api/quiz", {
           method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({ answers: answers.flat() }),
         });
         const data = await response.json();
         console.log(data);
@@ -158,7 +182,7 @@ const Quiz: React.FC = () => {
         console.log(error);
       }
     } else {
-      alert('Wszystkie pytania powinny mieć zaznaczoną odpowiedź!');
+      alert("Wszystkie pytania powinny mieć zaznaczoną odpowiedź!");
     }
   };
 
@@ -166,7 +190,9 @@ const Quiz: React.FC = () => {
     <div className="pt-20 bg-[#F1FFE7] text-[#6C464E] min-h-screen min-w-screen">
       <Navbar />
       <div className="p-4 flex flex-col items-center">
-        <h1 className="text-3xl font-bold mb-10 text-center">Znajdź najlepsze zajęcia dla swojego dziecka!</h1>
+        <h1 className="text-3xl font-bold mb-10 text-center">
+          Znajdź najlepsze zajęcia dla swojego dziecka!
+        </h1>
         <div className="flex flex-col gap-5 border-4 w-[70%]">
           {questions.map((question, index) => (
             <QuestionItem

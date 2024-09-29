@@ -1,6 +1,5 @@
 import React from "react";
 import NavButton from "./NavButton";
-import { signIn } from "next-auth/react";
 
 const Navbar = () => {
   return (
