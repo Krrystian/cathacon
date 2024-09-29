@@ -22,7 +22,7 @@ const NavButton: React.FC<NavButtonProps> = ({
       }`}
       onHoverStart={() => setOnHover(true)}
       onHoverEnd={() => setOnHover(false)}
-      onClick={separator ? undefined : () => signIn()}
+      onClick={separator ?  undefined : () => signIn("google")}
     >
       <Link href={href || "#"} className="px-4 h-full flex items-center">
         {children}
