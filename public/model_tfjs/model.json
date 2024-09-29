@@ -1,14 +1,14 @@
 {
   "format": "layers-model",
-  "generatedBy": "keras v3.4.1",
+  "generatedBy": "keras v3.5.0",
   "convertedBy": "TensorFlow.js Converter v4.21.0",
   "modelTopology": {
-    "keras_version": "3.4.1",
+    "keras_version": "3.5.0",
     "backend": "tensorflow",
     "model_config": {
       "class_name": "Sequential",
       "config": {
-        "name": "sequential_2",
+        "name": "sequential",
         "trainable": true,
         "dtype": {
           "module": "keras",
@@ -20,16 +20,16 @@
           {
             "class_name": "InputLayer",
             "config": {
-              "batch_shape": [null, 87],
+              "batch_shape": [null, 37],
               "dtype": "float32",
               "sparse": false,
-              "name": "input_layer_2"
+              "name": "input_layer"
             }
           },
           {
             "class_name": "Dense",
             "config": {
-              "name": "dense_6",
+              "name": "dense",
               "trainable": true,
               "dtype": {
                 "module": "keras",
@@ -61,7 +61,7 @@
           {
             "class_name": "Dense",
             "config": {
-              "name": "dense_7",
+              "name": "dense_1",
               "trainable": true,
               "dtype": {
                 "module": "keras",
@@ -93,7 +93,7 @@
           {
             "class_name": "Dense",
             "config": {
-              "name": "dense_8",
+              "name": "dense_2",
               "trainable": true,
               "dtype": {
                 "module": "keras",
@@ -123,7 +123,7 @@
             }
           }
         ],
-        "build_input_shape": [null, 87]
+        "build_input_shape": [null, 37]
       }
     },
     "training_config": {
@@ -161,35 +161,27 @@
       "paths": ["group1-shard1of1.bin"],
       "weights": [
         {
-          "name": "sequential_2/dense_6/kernel",
-          "shape": [87, 64],
+          "name": "sequential/dense/kernel",
+          "shape": [37, 64],
           "dtype": "float32"
         },
+        { "name": "sequential/dense/bias", "shape": [64], "dtype": "float32" },
         {
-          "name": "sequential_2/dense_6/bias",
-          "shape": [64],
-          "dtype": "float32"
-        },
-        {
-          "name": "sequential_2/dense_7/kernel",
+          "name": "sequential/dense_1/kernel",
           "shape": [64, 32],
           "dtype": "float32"
         },
         {
-          "name": "sequential_2/dense_7/bias",
+          "name": "sequential/dense_1/bias",
           "shape": [32],
           "dtype": "float32"
         },
         {
-          "name": "sequential_2/dense_8/kernel",
+          "name": "sequential/dense_2/kernel",
           "shape": [32, 9],
           "dtype": "float32"
         },
-        {
-          "name": "sequential_2/dense_8/bias",
-          "shape": [9],
-          "dtype": "float32"
-        }
+        { "name": "sequential/dense_2/bias", "shape": [9], "dtype": "float32" }
       ]
     }
   ]

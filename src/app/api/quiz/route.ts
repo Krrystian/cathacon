@@ -7,8 +7,8 @@ export async function POST(request: Request) {
     const answers = body.answers;
 
     // Validate input length
-    if (!Array.isArray(answers) || answers.length !== 87) {
-      return NextResponse.json({ error: 'Input should be an array of length 87' }, { status: 400 });
+    if (!Array.isArray(answers) || answers.length !== 37) {
+      return NextResponse.json({ error: 'Input should be an array of length 37' }, { status: 400 });
     }
 
     // Load the model
