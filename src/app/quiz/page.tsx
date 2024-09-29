@@ -31,7 +31,7 @@ const QuestionItem: React.FC<{
             onHoverStart={() => setHoveredOption(option)}
             onHoverEnd={() => setHoveredOption(null)}
             className={`p-4 rounded-xl cursor-pointer flex items-center justify-center text-center duration-300 transition-all ${
-              hoveredOption === option ? "bg-blue-300" : "bg-blue-300/60"
+              hoveredOption === option || selectedAnswer[index] === 1 ? "bg-blue-300" : "bg-blue-300/50"
             }`}
             onClick={() => handleOptionSelect(index)}
           >
@@ -49,9 +49,7 @@ const QuestionItem: React.FC<{
               className="text-xl cursor-pointer"
             >
               {option}
-              {selectedAnswer[index] === 1 && (
-                <span className="text-green-500 ml-2">✔️</span>
-              )}
+              {selectedAnswer[index] === 1}
             </label>
           </motion.div>
         ))}
@@ -167,7 +165,7 @@ const Quiz: React.FC = () => {
       <Navbar />
       <div className="p-4 flex flex-col items-center">
         <h1 className="text-3xl font-bold mb-10 text-center">Znajdź najlepsze zajęcia dla swojego dziecka!</h1>
-        <div className="flex flex-col gap-5 border-4 w-[70%]">
+        <div className="flex flex-col gap-5 w-[70%]">
           {questions.map((question, index) => (
             <QuestionItem
               key={index}
